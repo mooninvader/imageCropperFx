@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="753.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.logicCorp.controller.MainFormController">
+   <center>
+      <BorderPane focusTraversable="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <left>
+            <AnchorPane focusTraversable="true" prefHeight="479.0" prefWidth="97.0" styleClass="left-panel" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="saveBtn" contentDisplay="TOP" layoutX="11.0" layoutY="89.0" mnemonicParsing="false" onAction="#saveToImages" prefHeight="62.0" prefWidth="78.0" styleClass="cut-btn" text="Save" />
+                  <Button fx:id="loadImageBtn" contentDisplay="TOP" layoutX="9.0" layoutY="14.0" mnemonicParsing="false" onAction="#showLoadImageDlg" prefHeight="60.0" prefWidth="81.0" styleClass="load-btn" text="Load Image" />
+                  <Button fx:id="scanImage" contentDisplay="TOP" layoutX="9.0" layoutY="14.0" mnemonicParsing="false" onAction="#showLoadImageDlg" prefHeight="60.0" prefWidth="81.0" styleClass="scan-btn" text="Scanner" textFill="#f5f4f4" visible="false">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <ScrollPane fx:id="sPane" prefHeight="200.0" prefWidth="200.0" styleClass="main-panel" BorderPane.alignment="CENTER">
+                     <content>
+                        <AnchorPane fx:id="canvasContainer" focusTraversable="true" prefHeight="540.0" prefWidth="653.0" styleClass="main-panel">
+                           <children>
+                              <Canvas fx:id="imageCanvas" height="453.0" layoutX="7.0" layoutY="7.0" width="509.0" AnchorPane.bottomAnchor="87.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children></AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>
